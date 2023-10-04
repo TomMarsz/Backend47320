@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "code": "12ioh3",
+    "title": "Honda",
+    "price": 9153,
+    "thumbnail": "https://marcasdecoches.info/wp-content/uploads/2020/05/logotipo-actual-de-honda.jpg?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-1",
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "code": "hj67fa",
+    "title": "Mini Cooper",
+    "price": 4438,
+    "thumbnail": "https://acnews.blob.core.windows.net/imgnews/extralarge/NAZ_16d81085f2a64be09e1a0b9c55eb04b9.jpg",
+    "stock": 10
+  },
+  {
+    "id": 3,
+    "code": "qw90jd",
+    "title": "Peugeot",
+    "price": 7000,
+    "thumbnail": "https://yt3.ggpht.com/ytc/AMLnZu9VHYpPZl_WboTCenxYZtchOdCvzgy53zvLsOGYig=s88-c-k-c0x00ffffff-no-rj",
+    "stock": 10
+  },
+  {
+    "id": 4,
+    "code": "f7gkm3",
+    "title": "Toyota",
+    "price": 7862,
+    "thumbnail": "https://www.toyota.com.ar/images/logos/logo-toyota.svg",
+    "stock": 10
+  },
+  {
+    "id": 5,
+    "code": "er875v",
+    "title": "Smart",
+    "price": 8945,
+    "thumbnail": "https://www.smart.mercedes-benz.com/logo.svg",
+    "stock": 10
+  },
+  {
+    "id": 6,
+    "code": "ñlasp3",
+    "title": "Oldsmobile",
+    "price": 5727,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Oldsmobile_logo_used_from_1981_until_1997.svg/245px-Oldsmobile_logo_used_from_1981_until_1997.svg.png",
+    "stock": 10
+  },
+  {
+    "id": 7,
+    "code": "1pl2md",
+    "title": "Subaru",
+    "price": 5703,
+    "thumbnail": "https://motor.elpais.com/wp-content/uploads/2022/05/Subaru-logo-2048x1152.webp",
+    "stock": 10
+  },
+  {
+    "id": 8,
+    "code": "4tyjd0",
+    "title": "Renault",
+    "price": 9181,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Renault_2021_Text.svg/120px-Renault_2021_Text.svg.png",
+    "stock": 10
+  },
+  {
+    "id": 9,
+    "code": "12jgbc",
+    "title": "Dodge",
+    "price": 7149,
+    "thumbnail": "https://www.excelenciasdelmotor.com/sites/default/files/sites/default/files/imagenes-portada-ffp/dodge_0.jpg",
+    "stock": 10
+  },
+  {
+    "id": 10,
+    "code": "50xkkm",
+    "title": "Ford",
+    "price": 6785,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Ford_Motor_Company_Logo.svg",
+    "stock": 10
+  }
+]

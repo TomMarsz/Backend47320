@@ -1,0 +1,13 @@
+{
+    "id": 11,
+    "title": "Peugeot",
+    "description": "Peugeot",
+    "code": "12iths",
+    "price": 9153,
+    "status": true,
+    "stock": 10,
+    "category": "car",
+    "thumbnail": [
+      "https://yt3.ggpht.com/ytc/AMLnZu9VHYpPZl_WboTCenxYZtchOdCvzgy53zvLsOGYig=s88-c-k-c0x00ffffff-no-rj"
+    ]
+  }

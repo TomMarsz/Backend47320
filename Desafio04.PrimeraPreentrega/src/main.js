@@ -33,6 +33,7 @@ class ProductManager {
       const newProduct = { id, code, ...productData };
       products.push(newProduct);
       await fs.writeFile(`./${this.path}`, JSON.stringify(products, null, 2));
+      console.log('New product added:', newProduct);
       return products;
     } catch (error) {
       console.log(error);
@@ -43,7 +44,7 @@ class ProductManager {
     try {
       const products = await this.getProducts()
       const productsFilt = products.filter((p) => p.id === productId);
-      console.log(productsFilt);
+      return productsFilt
     } catch (error) {
       console.log(error);
     }
@@ -60,6 +61,7 @@ class ProductManager {
         };
         await fs.writeFile(`./${this.path}`, JSON.stringify(products, null, 2), 'utf-8');
         console.log('Product updated successfully.');
+        return products
       } else {
         console.log('Product not found.');
       }
@@ -73,11 +75,13 @@ class ProductManager {
       const products = await this.getProducts()
       const productsFilt = products.filter((p) => p.id !== productId);
       await fs.writeFile(`./${this.path}`, JSON.stringify(productsFilt, null, 2));
-      console.log(productsFilt);
+      console.log(`Product with the Id: ${productId} is deleted`);
+      return productsFilt
     } catch (error) {
       console.log(error);
     }
   }
 }
+
 const productManager = new ProductManager('../products.json')
 module.exports = productManager

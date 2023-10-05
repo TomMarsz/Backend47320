@@ -5,13 +5,15 @@ const app = express();
 const port = 8080
 
 const routerProducts = new Router()
+const routerCarts = new Router()
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use("/api/products", routerProducts);
+app.use("/api/carts", routerCarts);
 
 app.get("/", (req, res) => {
-  res.redirect("/api/products");
+  res.send({ error: "Use the routes '/api/products' or '/api/carts'" });
 });
 
 routerProducts.get('/', async (req, res) => {
@@ -33,15 +35,15 @@ routerProducts.get('/', async (req, res) => {
 
 routerProducts.get('/:id', async (req, res) => {
   try {
-    const products = await productManager.getProducts()
     const id = parseInt(req.params.id)
+    const products = await productManager.getProducts()
     if (isNaN(id)) {
       return res.send({ error: 'The entered parameter is not a number' });
-    }
-    if (id < 1 || id > products.length) {
+    } else if (id < 1 || id > products.length) {
       return res.send({ error: 'The entered parameter is not valid' });
+    } else {
+      res.send(await productManager.getProductById(id))
     }
-    res.send(products[id - 1])
   } catch (error) {
     console.log(error);
   }
@@ -50,6 +52,17 @@ routerProducts.get('/:id', async (req, res) => {
 routerProducts.post('/', async (req, res) => {
   const { body } = req
   res.send(await productManager.addProduct(body))
+})
+
+routerProducts.put('/:pid', async (req, res) => {
+  const pid = parseInt(req.params.pid)
+  const { body } = req
+  res.send(await productManager.updateProductById(pid, body))
+})
+
+routerProducts.delete('/:pid', async (req, res) => {
+  const pid = parseInt(req.params.pid)
+  res.send(await productManager.deleteProductById(pid))
 })
 
 const server = app.listen(port, () => {
